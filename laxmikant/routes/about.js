@@ -1,9 +1,7 @@
 const express = require("express");
-
+const { getAbout } = require("../controllers/aboutController");
 const router = express.Router();
 
-router.get("/", (req, res)=>{
-    res.json({ message: "About Page" });
-});
+router.get("/", getAbout);
 
 module.exports = router;
